@@ -19,6 +19,7 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #1e293b;
+      position: relative;
     }
 
     header h1 {
@@ -26,16 +27,50 @@
       font-size: 18px;
     }
 
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 15px;
       font-weight: bold;
       font-size: 14px;
     }
 
     nav a:hover {
       color: #22c55e;
+    }
+
+    /* ☰ BURGER */
+    .burger {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* MENU MOBILE */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #020617;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border: 1px solid #1e293b;
+        border-radius: 12px;
+        padding: 15px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .burger {
+        display: block;
+      }
     }
 
     .container {
@@ -84,12 +119,9 @@
       opacity: 0.9;
     }
 
-    .cta {
-      margin-top: 50px;
-    }
-
     .btn {
       display: inline-block;
+      margin-top: 50px;
       padding: 18px 30px;
       background: linear-gradient(135deg, #22c55e, #16a34a);
       color: black;
@@ -97,7 +129,6 @@
       font-size: 18px;
       border-radius: 14px;
       text-decoration: none;
-      box-shadow: 0 10px 30px rgba(34,197,94,0.3);
     }
 
     footer {
@@ -108,12 +139,6 @@
       opacity: 0.6;
       border-top: 1px solid #1e293b;
     }
-
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 24px;
-      }
-    }
   </style>
 </head>
 
@@ -121,7 +146,10 @@
 
 <header>
   <h1>🎯 IA by Lawin</h1>
-  <nav>
+
+  <div class="burger" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
     <a href="index.html">Accueil</a>
     <a href="ia.html">IA</a>
     <a href="contact.html">Contact</a>
@@ -138,42 +166,34 @@
   <div class="cards">
     <div class="card">
       <h3 class="safe">🟢 SAFE</h3>
-      <p>
-        Objectif : sécuriser.<br>
-        Double chance, under maîtrisé, handicap léger.<br>
-        Idéal pour construire une base solide.
-      </p>
+      <p>Paris sécurisés : double chance, under maîtrisé, handicap léger.</p>
     </div>
 
     <div class="card">
       <h3 class="semi">🟠 SEMI-SAFE</h3>
-      <p>
-        Équilibre risque / gain.<br>
-        Victoire + condition, over contrôlé.<br>
-        Pour optimiser sans trop s’exposer.
-      </p>
+      <p>Équilibre risque / gain : victoire + condition, over contrôlé.</p>
     </div>
 
     <div class="card">
       <h3 class="fun">🔴 FUN</h3>
-      <p>
-        Pari plaisir, risque élevé.<br>
-        BTTS, score exact, scénario surprise.<br>
-        Petits montants uniquement.
-      </p>
+      <p>Paris à risque : BTTS, score exact, scénario surprise.</p>
     </div>
   </div>
 
-  <div class="cta">
-    <a class="btn" href="#">
-      Analyser un match
-    </a>
-  </div>
+  <a class="btn" href="#">
+    Analyser un match
+  </a>
 </div>
 
 <footer>
   © 2026 — IA by Lawin • Tipster IA Sportif Avancé
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+  }
+</script>
 
 </body>
 </html>
