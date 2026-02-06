@@ -1,113 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>IA by Lawin — Contact</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA by Lawin — Accueil</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #000, #020617);
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: white;
+  text-align: center;
+}
 
-    header {
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #1e293b;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: #020617;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 18px;
-    }
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-      font-weight: bold;
-      font-size: 14px;
-    }
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    nav a:hover {
-      color: #22c55e;
-    }
+nav a:hover {
+  color: #22c55e;
+}
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 70px 20px;
-      text-align: center;
-    }
+.hero {
+  padding: 120px 20px;
+}
 
-    h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
 
-    .subtitle {
-      opacity: 0.75;
-      margin-bottom: 50px;
-      font-size: 16px;
-    }
+.hero p {
+  font-size: 18px;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: auto;
+}
 
-    .card {
-      background: rgba(2,6,23,0.95);
-      border: 1px solid #1e293b;
-      border-radius: 18px;
-      padding: 30px;
-      margin-bottom: 25px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #22c55e;
-    }
-
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .socials a {
-      padding: 14px 22px;
-      border-radius: 12px;
-      background: #020617;
-      border: 1px solid #1e293b;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .socials a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-
-    footer {
-      margin-top: 80px;
-      padding: 30px;
-      text-align: center;
-      font-size: 12px;
-      opacity: 0.6;
-      border-top: 1px solid #1e293b;
-    }
-
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 24px;
-      }
-    }
-  </style>
+.button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 30px;
+  background: #22c55e;
+  color: black;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
@@ -121,36 +78,15 @@
   </nav>
 </header>
 
-<div class="container">
-  <h2>Me contacter</h2>
-  <p class="subtitle">
-    Projet en développement — ouvert aux retours, échanges et collaborations.
+<section class="hero">
+  <h2>Tipster IA Sportif Avancé</h2>
+  <p>
+    Analyses sportives réfléchies, humaines et structurées.<br>
+    SAFE • SEMI • FUN — sans promesses irréalistes.
   </p>
 
-  <div class="card">
-    <h3>À propos</h3>
-    <p>
-      IA by Lawin est un projet personnel visant à proposer des analyses sportives
-      réfléchies, responsables et structurées, loin des promesses irréalistes.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Réseaux & contact</h3>
-    <p>Tu peux me retrouver ici 👇</p>
-
-    <div class="socials">
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">Twitter / X</a>
-      <a href="#" target="_blank">Telegram</a>
-      <a href="mailto:contact@ialawin.com">Email</a>
-    </div>
-  </div>
-</div>
-
-<footer>
-  © 2026 — IA by Lawin • Contact & Réseaux
-</footer>
+  <a class="button" href="ia.html">Accéder à l’IA</a>
+</section>
 
 </body>
 </html>
