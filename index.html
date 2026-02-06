@@ -11,8 +11,10 @@
       font-family: Arial, sans-serif;
       background: radial-gradient(circle at top, #020617, #000);
       color: white;
+      overflow-x: hidden;
     }
 
+    /* HEADER */
     header {
       padding: 16px 20px;
       display: flex;
@@ -37,20 +39,31 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 14px;
+      position: relative;
     }
 
-    nav a:hover {
-      color: #22c55e;
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #22c55e;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s;
     }
 
-    /* ☰ BURGER */
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* BURGER */
     .burger {
       display: none;
       font-size: 26px;
       cursor: pointer;
     }
 
-    /* MENU MOBILE */
     @media (max-width: 768px) {
       nav {
         display: none;
@@ -73,11 +86,13 @@
       }
     }
 
+    /* CONTAINER */
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
+      animation: fadeIn 1s ease;
     }
 
     h2 {
@@ -90,6 +105,7 @@
       margin-bottom: 40px;
     }
 
+    /* CARDS */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -102,6 +118,12 @@
       border-radius: 18px;
       padding: 25px;
       text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     }
 
     .card h3 {
@@ -119,16 +141,24 @@
       opacity: 0.9;
     }
 
+    /* BOUTON */
     .btn {
       display: inline-block;
       margin-top: 50px;
-      padding: 18px 30px;
+      padding: 18px 34px;
       background: linear-gradient(135deg, #22c55e, #16a34a);
       color: black;
       font-weight: bold;
       font-size: 18px;
-      border-radius: 14px;
+      border-radius: 16px;
       text-decoration: none;
+      box-shadow: 0 0 0 rgba(34,197,94,0.6);
+      animation: pulse 2.5s infinite;
+    }
+
+    .btn:hover {
+      animation: none;
+      box-shadow: 0 10px 40px rgba(34,197,94,0.4);
     }
 
     footer {
@@ -139,6 +169,18 @@
       opacity: 0.6;
       border-top: 1px solid #1e293b;
     }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); }
+      70%  { box-shadow: 0 0 0 20px rgba(34,197,94,0); }
+      100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+    }
   </style>
 </head>
 
@@ -146,9 +188,7 @@
 
 <header>
   <h1>🎯 IA by Lawin</h1>
-
   <div class="burger" onclick="toggleMenu()">☰</div>
-
   <nav id="menu">
     <a href="index.html">Accueil</a>
     <a href="ia.html">IA</a>
@@ -160,23 +200,23 @@
   <h2>Analyse IA Sportive</h2>
   <p class="subtitle">
     Une IA qui raisonne comme un tipster humain.<br>
-    Pas de pari forcé, uniquement de la logique.
+    Logique avant la cote.
   </p>
 
   <div class="cards">
     <div class="card">
       <h3 class="safe">🟢 SAFE</h3>
-      <p>Paris sécurisés : double chance, under maîtrisé, handicap léger.</p>
+      <p>Double chance, under maîtrisé, handicap léger.</p>
     </div>
 
     <div class="card">
       <h3 class="semi">🟠 SEMI-SAFE</h3>
-      <p>Équilibre risque / gain : victoire + condition, over contrôlé.</p>
+      <p>Victoire + condition, over contrôlé.</p>
     </div>
 
     <div class="card">
       <h3 class="fun">🔴 FUN</h3>
-      <p>Paris à risque : BTTS, score exact, scénario surprise.</p>
+      <p>BTTS, score exact, scénario surprise.</p>
     </div>
   </div>
 
