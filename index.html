@@ -2,100 +2,64 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>IA by Lawin — Accueil</title>
+  <title>IA by Lawin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #020617, #020617);
+      background: #020617;
       color: white;
       text-align: center;
     }
 
-    header {
-      padding: 20px;
-      background: #020617;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 18px;
-      margin: 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-      font-weight: bold;
-    }
-
-    .hero {
+    .container {
       padding: 80px 20px;
     }
 
-    .hero h2 {
-      font-size: 28px;
+    h1 {
+      font-size: 26px;
       margin-bottom: 10px;
     }
 
-    .hero p {
-      opacity: 0.85;
-      margin-bottom: 30px;
+    p {
       font-size: 16px;
+      opacity: 0.85;
+      line-height: 1.6;
     }
 
     .btn {
-      display: inline-block;
-      padding: 16px 28px;
+      display: block;
+      margin: 40px auto;
+      padding: 18px;
       background: #22c55e;
       color: black;
       font-weight: bold;
-      text-decoration: none;
+      font-size: 18px;
       border-radius: 12px;
-      font-size: 16px;
-    }
-
-    .btn:hover {
-      background: #16a34a;
-    }
-
-    footer {
-      margin-top: 60px;
-      padding: 20px;
-      font-size: 12px;
-      opacity: 0.6;
+      text-decoration: none;
+      max-width: 300px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>IA by Lawin</h1>
-  <nav>
-    <a href="#">Accueil</a>
-    <a href="#">IA</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+  <div class="container">
+    <h1>🎯 IA by Lawin</h1>
 
-<section class="hero">
-  <h2>Tipster IA Sportif Avancé</h2>
-  <p>Analyses intelligentes Football • Basket • Tennis</p>
+    <p>
+      Tipster IA Sportif Avancé<br>
+      Football • Basket • Tennis<br><br>
+      SAFE • SEMI • FUN
+    </p>
 
-  <a class="btn" href="https://lawin-tipster-ia.streamlit.app" target="_blank">
-    Accéder à l’IA
-  </a>
-</section>
-
-<footer>
-  © 2026 — IA by Lawin
-</footer>
+    <!-- 🔥 LIEN SIMPLE (SANS TARGET) 🔥 -->
+    <a class="btn" href="https://www.google.com">
+      Accéder à l’IA
+    </a>
+  </div>
 
 </body>
 </html>
