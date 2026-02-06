@@ -9,17 +9,15 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #020617;
+      background: radial-gradient(circle at top, #020617, #000);
       color: white;
     }
 
     header {
-      background: #020617;
-      padding: 16px;
+      padding: 16px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
       border-bottom: 1px solid #1e293b;
     }
 
@@ -41,66 +39,79 @@
     }
 
     .container {
-      padding: 50px 20px;
       max-width: 900px;
       margin: auto;
+      padding: 50px 20px;
       text-align: center;
     }
 
     h2 {
-      font-size: 26px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 8px;
     }
 
-    p {
-      font-size: 16px;
-      opacity: 0.85;
-      line-height: 1.6;
+    .subtitle {
+      opacity: 0.7;
+      margin-bottom: 40px;
     }
 
-    .block {
-      margin-top: 35px;
-      padding: 25px;
-      border-radius: 16px;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(2,6,23,0.9);
       border: 1px solid #1e293b;
-      background: #020617;
+      border-radius: 18px;
+      padding: 25px;
       text-align: left;
     }
 
-    .block h3 {
+    .card h3 {
       margin-top: 0;
+      font-size: 20px;
     }
 
     .safe { color: #22c55e; }
     .semi { color: #facc15; }
     .fun  { color: #ef4444; }
 
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .cta {
+      margin-top: 50px;
+    }
+
     .btn {
-      display: block;
-      margin: 40px auto;
-      padding: 18px;
-      background: #22c55e;
+      display: inline-block;
+      padding: 18px 30px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
       color: black;
       font-weight: bold;
       font-size: 18px;
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
-      max-width: 300px;
-      text-align: center;
+      box-shadow: 0 10px 30px rgba(34,197,94,0.3);
     }
 
     footer {
-      text-align: center;
+      margin-top: 80px;
       padding: 30px;
+      text-align: center;
       font-size: 12px;
       opacity: 0.6;
       border-top: 1px solid #1e293b;
-      margin-top: 60px;
     }
 
     @media (max-width: 600px) {
       h2 {
-        font-size: 23px;
+        font-size: 24px;
       }
     }
   </style>
@@ -119,42 +130,49 @@
 
 <div class="container">
   <h2>Analyse IA Sportive</h2>
-  <p>
-    Cette intelligence artificielle analyse les matchs comme un vrai tipster humain.<br>
-    Elle ne force jamais un pari et privilégie la logique avant la cote.
+  <p class="subtitle">
+    Une IA qui raisonne comme un tipster humain.<br>
+    Pas de pari forcé, uniquement de la logique.
   </p>
 
-  <div class="block">
-    <h3 class="safe">🟢 SAFE</h3>
-    <p>
-      Paris sécurisés, faible risque.<br>
-      Exemple : double chance, under raisonnable, handicap léger.
-    </p>
+  <div class="cards">
+    <div class="card">
+      <h3 class="safe">🟢 SAFE</h3>
+      <p>
+        Objectif : sécuriser.<br>
+        Double chance, under maîtrisé, handicap léger.<br>
+        Idéal pour construire une base solide.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="semi">🟠 SEMI-SAFE</h3>
+      <p>
+        Équilibre risque / gain.<br>
+        Victoire + condition, over contrôlé.<br>
+        Pour optimiser sans trop s’exposer.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="fun">🔴 FUN</h3>
+      <p>
+        Pari plaisir, risque élevé.<br>
+        BTTS, score exact, scénario surprise.<br>
+        Petits montants uniquement.
+      </p>
+    </div>
   </div>
 
-  <div class="block">
-    <h3 class="semi">🟠 SEMI-SAFE</h3>
-    <p>
-      Bon compromis risque / gain.<br>
-      Exemple : victoire + condition, over maîtrisé.
-    </p>
+  <div class="cta">
+    <a class="btn" href="#">
+      Analyser un match
+    </a>
   </div>
-
-  <div class="block">
-    <h3 class="fun">🔴 FUN</h3>
-    <p>
-      Paris à risque élevé, uniquement pour le fun.<br>
-      Exemple : BTTS, score exact, gros over.
-    </p>
-  </div>
-
-  <a class="btn" href="#">
-    Analyser un match
-  </a>
 </div>
 
 <footer>
-  © 2026 — IA by Lawin • Analyse sportive assistée par IA
+  © 2026 — IA by Lawin • Tipster IA Sportif Avancé
 </footer>
 
 </body>
